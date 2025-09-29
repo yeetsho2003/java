@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read More</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function ToggleReadMore() {
+                let moreText = document.getElementById("more");
+                let button = document.getElementById("btn");
+
+                if (moreText.style.display === "none") {
+                    moreText.style.display = "block";
+                    button.innerText = "Read Less";
+                } else {
+                    moreText.style.display = "none";
+                    button.innerText = "Read More";
+                }
+            }
+
+            window.ToggleReadMore = ToggleReadMore;
+        });
+    </script>
+</head>
+<body>
+    <h1>The Demo to Read More</h1>
+    <p>This is the abstract content.</p>
+    <p id="more" style="display:none">This is an additional content</p>
+    <button id="btn" onclick="ToggleReadMore()">Read More</button>
+</body>
+</html>
